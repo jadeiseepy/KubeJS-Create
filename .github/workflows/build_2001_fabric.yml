@@ -49,7 +49,7 @@ jobs:
           arguments: build
       - name: Move builds
         run: |
-          mv build/libs/kubejs-create-fabric-2001.2.5-build.{{ github.run_number }}.jar build/libs/kjs-build.jar
+          mv build/libs/kubejs-create-fabric-2001.2.5-build.${{ github.run_number }}.jar build/libs/kjs-build.jar
       - uses: mmkal/artifact.ci/upload@main
         with:
           path: build/libs/kjs-build.jar
