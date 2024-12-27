@@ -47,8 +47,11 @@ jobs:
         uses: gradle/gradle-build-action@v2
         with:
           arguments: build
+      - name: Move builds
+        run: |
+          mv build/libs/kubejs-create-fabric-2001.2.5-build.{{ github.run_number }}.jar build/libs/kjs-build.jar
       - uses: mmkal/artifact.ci/upload@main
         with:
-          path: build/libs/kubejs-create-fabric-2001.2.*-build.*.jar
+          path: build/libs/kjs-build.jar
           artifactci-visibility: public
           artifactci-mode: eager
