@@ -49,4 +49,4 @@ jobs:
           arguments: build
       - uses: actions/upload-artifact@v4
         with:
-          path: build/libs/*
+          path: build/libs/kubejs-create-fabric-2001.2.*-build.*.jar
